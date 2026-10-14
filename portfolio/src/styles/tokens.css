@@ -1,0 +1,40 @@
+:root {
+  --content-max: 1120px;
+  --radius: 18px;
+  --font: "Poppins", "Segoe UI", Arial, sans-serif;
+  --font-logo: "LogoScript", "Segoe Script", cursive;
+  --accent: #2fa4ff;
+  --accent-dark: #1e88e5;
+}
+
+[data-theme="light"] {
+  --bg: #f2f4fa;
+  --surface: #ffffff;
+  --surface-border: #e6e9f2;
+  --text: #161a28;
+  --muted: #5b6072;
+  --input-bg: #ffffff;
+  --input-border: #d9deea;
+  --input-placeholder: #9aa0b4;
+  --submit-bg: #232838;
+  --submit-text: #ffffff;
+  --nav-bg: rgba(242, 244, 250, 0.88);
+  --shadow: 0 12px 32px rgba(30, 40, 80, 0.08);
+  --link: #2fa4ff;
+}
+
+[data-theme="dark"] {
+  --bg: #0a0a0f;
+  --surface: #14141b;
+  --surface-border: #23232c;
+  --text: #f4f6fb;
+  --muted: #a2a8bc;
+  --input-bg: #101016;
+  --input-border: #2b2b35;
+  --input-placeholder: #6d7285;
+  --submit-bg: #f4f6fb;
+  --submit-text: #0a0a0f;
+  --nav-bg: rgba(10, 10, 15, 0.88);
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --link: #2fa4ff;
+}
