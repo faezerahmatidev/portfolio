@@ -1,6 +1,8 @@
-# Faeze Rahmati — Portfolio Website
+# Faeze Rahmati — Portfolio Website (FA / EN)
 
 Personal portfolio website for **Faeze Rahmati, Angular Frontend Developer**, built to match the supplied Figma community design ("Designer_Developer Portfolio") — light + dark themes, responsive with a mobile layout.
+
+**Bilingual:** English (LTR, Poppins) and Persian (RTL, Vazirmatn) with a navbar language switcher; choice is saved in `localStorage`. The Persian "Download Resume" button downloads the Persian PDF.
 
 > ⚠️ Local use only. Nothing here is deployed; pushing to GitHub happens only on explicit request.
 
@@ -31,7 +33,8 @@ Navbar (Home, About, Projects, Services, Resume + Contact button + theme toggle)
 
 ## Files worth knowing
 
-- `src/data.ts` — every string, service, project and link in one place
+- `src/data.ts` → `src/content/fa.ts` + `src/content/en.ts` — every string, service, project and link in one place per language
+- `src/images.ts` — shared project thumbnails
 - `src/assets/projects/*.jpg` — real screenshots of each live demo (retake if a demo changes)
 - `src/assets/avatar.jpg` — profile photo (local copy, approved via Gravatar)
 - `src/assets/fonts/` — Poppins 400–800 + logo script (self-hosted, OFL)
