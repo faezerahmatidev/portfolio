@@ -11,6 +11,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html[lang="fa"] body {
+  font-family: var(--font-fa);
+  line-height: 1.9;
+}
+
 a { color: var(--link); }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline: 2px solid var(--link);
@@ -44,7 +49,7 @@ main { flex: 1; }
   color: var(--text);
   text-decoration: none;
   line-height: 1;
-  margin-right: auto;
+  margin-inline-end: auto;
 }
 .nav-links { display: flex; gap: 28px; align-items: center; }
 .nav-links a {
@@ -54,7 +59,7 @@ main { flex: 1; }
   font-weight: 500;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--link); }
-.nav-side { display: flex; gap: 12px; align-items: center; margin-left: auto; }
+.nav-side { display: flex; gap: 12px; align-items: center; margin-inline-start: auto; }
 .btn-outline {
   font: inherit;
   font-size: 13px;
@@ -313,8 +318,7 @@ main { flex: 1; }
     display: none;
     position: absolute;
     top: 100%;
-    left: 12px;
-    right: 12px;
+    inset-inline: 12px;
     background: var(--surface);
     border: 1px solid var(--surface-border);
     border-radius: 14px;
@@ -329,6 +333,7 @@ main { flex: 1; }
   .navbar .nav-inner { position: relative; flex-wrap: wrap; }
   .menu-btn { display: block; }
   .nav-side .btn-outline { display: none; }
+  .nav-side .btn-outline.lang-btn { display: block; }
 }
 
 @media (max-width: 600px) {

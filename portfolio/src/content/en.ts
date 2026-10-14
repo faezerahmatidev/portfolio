@@ -1,25 +1,5 @@
-import nobatifaImg from "./assets/projects/nobatifa.jpg";
-import nobatifaAdminImg from "./assets/projects/nobatifa-admin.jpg";
-import interactiveArtImg from "./assets/projects/interactive-art.jpg";
-import fastfoodImg from "./assets/projects/fastfood.jpg";
-import campingImg from "./assets/projects/camping.jpg";
-import nftImg from "./assets/projects/nft.jpg";
-
-export interface Service {
-  icon: string;
-  title: string;
-  desc: string;
-}
-
-export interface Project {
-  slug: string;
-  title: string;
-  tech: string;
-  category: "angular" | "html" | "bootstrap";
-  img: string;
-  demo: string;
-  repo: string;
-}
+import type { NavLink, Service, Project, Filter } from "../types";
+import { projectImages } from "../images";
 
 export const site = {
   name: "Faeze Rahmati",
@@ -37,11 +17,40 @@ export const site = {
     "I work with components, services, routing, forms and REST APIs, and I turn Figma designs into responsive, maintainable code that works on every screen.",
     "I'm currently strengthening my frontend skills and learning React. Let's work together — scroll down to see selected projects, then get in touch."
   ],
-  contactIntro: "Prefer email or a form — either way, I usually reply within a day.",
-  footerRights: "© 2026 Faeze Rahmati. All rights reserved."
+  contactBtn: "Contact Me",
+  aboutTitle: "About Me",
+  aboutSub: "Get to know me",
+  downloadResume: "Download Resume",
+  servicesTitle: "What I do",
+  servicesSub: "My Services",
+  projectsTitle: "Projects",
+  projectsSub: "Some of my work",
+  sourceCode: "Source code",
+  viewAll: "View all",
+  contactTitle: "Get In Touch",
+  contactSub: "Lets work together",
+  fieldName: "Name",
+  fieldNamePh: "Your name",
+  fieldEmail: "Email",
+  fieldEmailPh: "email@example.com",
+  fieldService: "Service",
+  fieldServicePh: "Select a service",
+  fieldMessage: "Message",
+  fieldMessagePh: "Tell me about your project...",
+  submitBtn: "Get In Touch",
+  sentNote: "Opening your email app to send the message…",
+  footerCta: ["Let’s", "Work Together -"],
+  footerRights: "© 2026 Faeze Rahmati. All rights reserved.",
+  langButton: "فارسی",
+  contactNav: "Contact",
+  themeToDark: "Switch to dark theme",
+  themeToLight: "Switch to light theme",
+  menuOpen: "Open menu",
+  menuClose: "Close menu",
+  liveDemo: "live demo"
 };
 
-export const navLinks = [
+export const navLinks: NavLink[] = [
   { href: "#top", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
@@ -77,12 +86,12 @@ export const services: Service[] = [
   }
 ];
 
-export const projectFilters = [
+export const projectFilters: Filter[] = [
   { key: "all", label: "All" },
   { key: "angular", label: "Angular" },
   { key: "html", label: "HTML & CSS" },
   { key: "bootstrap", label: "Bootstrap" }
-] as const;
+];
 
 export const projects: Project[] = [
   {
@@ -90,7 +99,6 @@ export const projects: Project[] = [
     title: "Nobatifa — Vehicle-Service Booking App",
     tech: "Angular · TypeScript · Tailwind CSS",
     category: "angular",
-    img: nobatifaImg,
     demo: "https://faezerahmatidev.github.io/Nobatifa-Website/",
     repo: "https://github.com/faezerahmatidev/Nobatifa-Website"
   },
@@ -99,7 +107,6 @@ export const projects: Project[] = [
     title: "Nobatifa — Admin Panel",
     tech: "Angular · TypeScript",
     category: "angular",
-    img: nobatifaAdminImg,
     demo: "https://faezerahmatidev.github.io/Nobatifa-Admin/",
     repo: "https://github.com/faezerahmatidev/Nobatifa-Admin"
   },
@@ -108,7 +115,6 @@ export const projects: Project[] = [
     title: "Interactive Art Landing Page",
     tech: "HTML · CSS · JavaScript",
     category: "html",
-    img: interactiveArtImg,
     demo: "https://faezerahmatidev.github.io/interactive-art-landing-page/",
     repo: "https://github.com/faezerahmatidev/interactive-art-landing-page"
   },
@@ -117,7 +123,6 @@ export const projects: Project[] = [
     title: "Fastfood Landing Page",
     tech: "HTML · CSS · JavaScript",
     category: "html",
-    img: fastfoodImg,
     demo: "https://faezerahmatidev.github.io/fastfood-landing-page/",
     repo: "https://github.com/faezerahmatidev/fastfood-landing-page"
   },
@@ -126,7 +131,6 @@ export const projects: Project[] = [
     title: "Camping Discoveries Website",
     tech: "HTML · CSS · JavaScript",
     category: "html",
-    img: campingImg,
     demo: "https://faezerahmatidev.github.io/CampingDiscoveries/",
     repo: "https://github.com/faezerahmatidev/CampingDiscoveries"
   },
@@ -135,7 +139,6 @@ export const projects: Project[] = [
     title: "NftVision Marketplace (RTL)",
     tech: "HTML · CSS · Bootstrap 5",
     category: "bootstrap",
-    img: nftImg,
     demo: "https://faezerahmatidev.github.io/NftVision-Marketplace/",
     repo: "https://github.com/faezerahmatidev/NftVision-Marketplace"
   }
@@ -147,3 +150,5 @@ export const serviceOptions = [
   "API Integration",
   "Other"
 ];
+
+export { projectImages };

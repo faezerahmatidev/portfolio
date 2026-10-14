@@ -1,6 +1,10 @@
 import { useState } from "react";
-import { site, services, projects, projectFilters, serviceOptions } from "../data";
+import type { Lang } from "../types";
+import type { site as siteEn, services as servicesEn, projects as projectsEn, projectFilters as filtersEn, serviceOptions as optionsEn } from "../content/en";
+import { projectImages } from "../images";
 import { SectionHead } from "./Hero";
+
+type Site = typeof siteEn;
 
 function SvcIcon({ d }: { d: string }) {
   return (
@@ -18,17 +22,19 @@ const serviceIcons: Record<string, string> = {
   maintenance: "M12 2l8 3v6c0 5-3.5 9.3-8 11-4.5-1.7-8-6-8-11V5l8-3zM9 12l2 2 4-4"
 };
 
-export function About() {
+export function About({ t }: { t: Site }) {
   return (
-    <section className="section" id="about" aria-label="About Me">
-      <SectionHead title="About Me" sub="Get to know me" />
+    <section className="section" id="about" aria-label={t.aboutTitle}>
+      <SectionHead title={t.aboutTitle} sub={t.aboutSub} />
       <div className="about-body">
-        {site.about.map((p, i) => (
-          <p key={i}>{p}</p>
+        {t.about.map((p, i) => (
+          <p key={i} dir="auto">
+            {p}
+          </p>
         ))}
         <div className="cta-row">
-          <a className="btn-outline" href={site.resumePdf} download="Faeze-Rahmati-Resume.pdf">
-            Download Resume
+          <a className="btn-outline" href={t.resumePdf} download>
+            {t.downloadResume}
           </a>
         </div>
       </div>
@@ -36,27 +42,18 @@ export function About() {
   );
 }
 
-export function Services() {
+export function ServicesSection({ t, groups }: { t: Site; groups: typeof servicesEn }) {
   return (
-    <section className="section" id="services" aria-label="What I do">
-      <SectionHead title="What I do" sub="My Services" />
+    <section className="section" id="services" aria-label={t.servicesTitle}>
+      <SectionHead title={t.servicesTitle} sub={t.servicesSub} />
       <div className="services-grid">
-        {services.slice(0, 3).map((s) => (
+        {groups.map((s) => (
           <div className="service-card" key={s.title}>
             <div className="svc-icon" aria-hidden="true">
               <SvcIcon d={serviceIcons[s.icon] || serviceIcons.api} />
             </div>
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
-          </div>
-        ))}
-        {services.slice(3).map((s) => (
-          <div className="service-card" key={s.title}>
-            <div className="svc-icon" aria-hidden="true">
-              <SvcIcon d={serviceIcons[s.icon] || serviceIcons.api} />
-            </div>
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
+            <h3 dir="auto">{s.title}</h3>
+            <p dir="auto">{s.desc}</p>
           </div>
         ))}
         <div className="service-card service-visual" aria-hidden="true">
@@ -67,14 +64,22 @@ export function Services() {
   );
 }
 
-export function Projects() {
+export function Projects({
+  t,
+  items,
+  filters
+}: {
+  t: Site;
+  items: typeof projectsEn;
+  filters: typeof filtersEn;
+}) {
   const [filter, setFilter] = useState<string>("all");
-  const visible = filter === "all" ? projects : projects.filter((p) => p.category === filter);
+  const visible = filter === "all" ? items : items.filter((p) => p.category === filter);
   return (
-    <section className="section" id="projects" aria-label="Projects">
-      <SectionHead title="Projects" sub="Some of my work" />
+    <section className="section" id="projects" aria-label={t.projectsTitle}>
+      <SectionHead title={t.projectsTitle} sub={t.projectsSub} />
       <div className="filter-row" role="group" aria-label="Filter projects">
-        {projectFilters.map((f) => (
+        {filters.map((f) => (
           <button
             key={f.key}
             type="button"
@@ -89,23 +94,23 @@ export function Projects() {
       <div className="projects-grid">
         {visible.map((p) => (
           <article className="project-card" key={p.slug}>
-            <a className="project-thumb" href={p.demo} target="_blank" rel="noreferrer" aria-label={`${p.title} — live demo`}>
-              <img src={p.img} alt={`${p.title} preview`} loading="lazy" />
+            <a className="project-thumb" href={p.demo} target="_blank" rel="noreferrer" aria-label={`${p.title} — ${t.liveDemo}`}>
+              <img src={projectImages[p.slug]} alt={`${p.title} preview`} loading="lazy" />
             </a>
             <div className="project-meta">
-              <h3>
+              <h3 dir="auto">
                 <a href={p.demo} target="_blank" rel="noreferrer">
                   {p.title}
                 </a>
               </h3>
-              <a className="go-btn" href={p.demo} target="_blank" rel="noreferrer" aria-label={`${p.title} — open live demo`}>
+              <a className="go-btn" href={p.demo} target="_blank" rel="noreferrer" aria-label={`${p.title} — ${t.liveDemo}`}>
                 <span aria-hidden="true">↗</span>
               </a>
             </div>
-            <p className="project-tech">
-              {p.tech} ·{" "}
+            <p className="project-tech" dir="auto">
+              <span dir="ltr">{p.tech}</span> ·{" "}
               <a href={p.repo} target="_blank" rel="noreferrer">
-                Source code
+                {t.sourceCode}
               </a>
             </p>
           </article>
@@ -113,15 +118,24 @@ export function Projects() {
       </div>
       <div className="center-row">
         <a className="btn-outline" href="https://github.com/faezerahmatidev?tab=repositories" target="_blank" rel="noreferrer">
-          View all
+          {t.viewAll}
         </a>
       </div>
     </section>
   );
 }
 
-export function Contact() {
+export function Contact({
+  t,
+  options,
+  lang
+}: {
+  t: Site;
+  options: typeof optionsEn;
+  lang: Lang;
+}) {
   const [sent, setSent] = useState(false);
+  void lang;
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -132,30 +146,36 @@ export function Contact() {
     const message = String(data.get("message") || "");
     const subject = encodeURIComponent(`Portfolio inquiry — ${service || "General"} (from ${name || "website visitor"})`);
     const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${t.email}?subject=${subject}&body=${body}`;
     setSent(true);
   }
 
   return (
     <>
-      <section className="section" id="contact" aria-label="Get In Touch">
-        <SectionHead title="Get In Touch" sub="Lets work together" />
+      <section className="section" id="contact" aria-label={t.contactTitle}>
+        <SectionHead title={t.contactTitle} sub={t.contactSub} />
         <form className="contact-form" onSubmit={onSubmit}>
           <div className="field">
-            <label htmlFor="cf-name">Name</label>
-            <input id="cf-name" name="name" type="text" placeholder="Your name" autoComplete="name" required />
+            <label htmlFor="cf-name" dir="auto">
+              {t.fieldName}
+            </label>
+            <input id="cf-name" name="name" type="text" placeholder={t.fieldNamePh} autoComplete="name" required />
           </div>
           <div className="field">
-            <label htmlFor="cf-email">Email</label>
-            <input id="cf-email" name="email" type="email" placeholder="email@example.com" autoComplete="email" required />
+            <label htmlFor="cf-email" dir="auto">
+              {t.fieldEmail}
+            </label>
+            <input id="cf-email" name="email" type="email" placeholder={t.fieldEmailPh} autoComplete="email" required dir="ltr" />
           </div>
           <div className="field">
-            <label htmlFor="cf-service">Service</label>
+            <label htmlFor="cf-service" dir="auto">
+              {t.fieldService}
+            </label>
             <select id="cf-service" name="service" defaultValue="">
               <option value="" disabled>
-                Select a service
+                {t.fieldServicePh}
               </option>
-              {serviceOptions.map((s) => (
+              {options.map((s) => (
                 <option key={s} value={s}>
                   {s}
                 </option>
@@ -163,40 +183,46 @@ export function Contact() {
             </select>
           </div>
           <div className="field">
-            <label htmlFor="cf-message">Message</label>
-            <textarea id="cf-message" name="message" placeholder="Tell me about your project..." required />
+            <label htmlFor="cf-message" dir="auto">
+              {t.fieldMessage}
+            </label>
+            <textarea id="cf-message" name="message" placeholder={t.fieldMessagePh} required />
           </div>
           <button type="submit" className="btn-submit">
-            Get In Touch
+            {t.submitBtn}
           </button>
-          {sent && <p className="form-note">Opening your email app to send the message…</p>}
+          {sent && (
+            <p className="form-note" dir="auto">
+              {t.sentNote}
+            </p>
+          )}
         </form>
       </section>
 
       <section className="work-together" aria-label="Work together">
-        <h2>
-          Let&rsquo;s
+        <h2 dir="auto">
+          {t.footerCta[0]}
           <br />
-          Work Together -
+          {t.footerCta[1]}
         </h2>
-        <a className="email-pill" href={`mailto:${site.email}`}>
-          <span aria-hidden="true">✉</span> {site.email}
+        <a className="email-pill" href={`mailto:${t.email}`}>
+          <span aria-hidden="true">✉</span> <span dir="ltr">{t.email}</span>
         </a>
       </section>
 
       <footer className="footer-bar">
-        <small>{site.footerRights}</small>
+        <small dir="auto">{t.footerRights}</small>
         <div className="socials">
-          <a href={site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <a href={t.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
             in
           </a>
-          <a href={site.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+          <a href={t.github} target="_blank" rel="noreferrer" aria-label="GitHub">
             ⌨
           </a>
-          <a href={`mailto:${site.email}`} aria-label="Email">
+          <a href={`mailto:${t.email}`} aria-label="Email">
             ✉
           </a>
-          <a href={site.gravatar} target="_blank" rel="noreferrer" aria-label="Gravatar">
+          <a href={t.gravatar} target="_blank" rel="noreferrer" aria-label="Gravatar">
             ◉
           </a>
         </div>

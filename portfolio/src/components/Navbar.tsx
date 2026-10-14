@@ -1,17 +1,34 @@
 import { useState } from "react";
-import type { Theme } from "../types";
-import { site, navLinks } from "../data";
+import type { Lang, Theme } from "../types";
+import type { site as siteEn } from "../content/en";
 
-export function Navbar({ theme, onTheme }: { theme: Theme; onTheme: () => void }) {
+type Site = typeof siteEn;
+
+export function Navbar({
+  lang,
+  theme,
+  t,
+  nav,
+  onLang,
+  onTheme
+}: {
+  lang: Lang;
+  theme: Theme;
+  t: Site;
+  nav: { href: string; label: string }[];
+  onLang: () => void;
+  onTheme: () => void;
+}) {
   const [open, setOpen] = useState(false);
+  const isFa = lang === "fa";
   return (
     <header className="navbar">
       <div className="nav-inner">
         <a href="#top" className="brand">
-          {site.logo}
+          {t.logo}
         </a>
-        <nav className={`nav-links${open ? " open" : ""}`} aria-label="Main navigation">
-          {navLinks.map((l) => (
+        <nav className={`nav-links${open ? " open" : ""}`} aria-label={isFa ? "ناوبری اصلی" : "Main navigation"}>
+          {nav.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
               {l.label}
             </a>
@@ -19,14 +36,17 @@ export function Navbar({ theme, onTheme }: { theme: Theme; onTheme: () => void }
         </nav>
         <div className="nav-side">
           <a href="#contact" className="btn-outline">
-            Contact
+            {t.contactNav}
           </a>
+          <button type="button" className="btn-outline lang-btn" onClick={onLang} aria-label={isFa ? "Switch to English" : "تغییر به فارسی"}>
+            {t.langButton}
+          </button>
           <button
             type="button"
             className="icon-btn"
             onClick={onTheme}
             aria-pressed={theme === "dark"}
-            aria-label={theme === "light" ? "Switch to dark theme" : "Switch to light theme"}
+            aria-label={theme === "light" ? t.themeToDark : t.themeToLight}
           >
             <span aria-hidden="true">{theme === "light" ? "🌙" : "☀️"}</span>
           </button>
@@ -35,7 +55,7 @@ export function Navbar({ theme, onTheme }: { theme: Theme; onTheme: () => void }
             className="icon-btn menu-btn"
             onClick={() => setOpen((o) => !o)}
             aria-expanded={open}
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t.menuClose : t.menuOpen}
           >
             <span aria-hidden="true">{open ? "✕" : "☰"}</span>
           </button>
