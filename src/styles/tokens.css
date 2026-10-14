@@ -1,0 +1,48 @@
+:root {
+  --page-max: 720px;
+  --radius: 10px;
+  --font-stack: "Vazirmatn", "IRANSans", "IRANSansX", "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-en: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --sheet: #ffffff;
+  --text: #1a1d26;
+  --muted: #6b7280;
+  --divider: #e8e8ee;
+  --header-gradient: linear-gradient(120deg, #eda3f4 0%, #c4b0fd 48%, #b9d0fe 100%);
+  --header-text: #232839;
+  --header-sub: #4b5563;
+  --label: #1f2937;
+  --tag-bg: #eef2f7;
+  --tag-text: #5a6b8c;
+  --tag-border: transparent;
+  --mini-bg: #f3f4f6;
+  --mini-text: #4b5563;
+  --badge-bg: #ffffff;
+  --link: #4f46e5;
+  --control-bg: #f3f4f6;
+  --control-border: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --bg: #0a1022;
+  --sheet: #0a1022;
+  --text: #eef2f8;
+  --muted: #8fa0bb;
+  --divider: #1d2942;
+  --header-gradient: linear-gradient(120deg, #701a7e 0%, #4c1d95 45%, #1e3a8a 100%);
+  --header-text: #ffffff;
+  --header-sub: #d3ddf0;
+  --label: #f1f5f9;
+  --tag-bg: #1b2946;
+  --tag-text: #9db4d8;
+  --tag-border: transparent;
+  --mini-bg: #1b2946;
+  --mini-text: #93a5c4;
+  --badge-bg: #fdf4ff;
+  --link: #a5b4fc;
+  --control-bg: #16213a;
+  --control-border: #2b3b58;
+}
