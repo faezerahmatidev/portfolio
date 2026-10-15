@@ -26,6 +26,7 @@ export const site = {
   projectsSub: "نمونه‌کارهای من",
   sourceCode: "سورس‌کد",
   viewAll: "مشاهده همه",
+  showLess: "بستن",
   contactTitle: "در تماس باشیم",
   contactSub: "بیایید با هم کار کنیم",
   fieldName: "نام",
@@ -93,6 +94,14 @@ export const projectFilters: Filter[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    slug: "crm-dashboard",
+    title: "داشبورد CRM",
+    tech: "Angular · TypeScript · SCSS",
+    category: "angular",
+    demo: "https://faezerahmatidev.github.io/CRM-Dashboard/",
+    repo: "https://github.com/faezerahmatidev/CRM-Dashboard"
+  },
   {
     slug: "nobatifa",
     title: "نوبتیفا — اپ رزرو نوبت اتوسرویس",

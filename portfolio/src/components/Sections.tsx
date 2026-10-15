@@ -74,7 +74,10 @@ export function Projects({
   filters: typeof filtersEn;
 }) {
   const [filter, setFilter] = useState<string>("all");
+  const [expanded, setExpanded] = useState(false);
+  const PAGE_SIZE = 6;
   const visible = filter === "all" ? items : items.filter((p) => p.category === filter);
+  const shown = expanded ? visible : visible.slice(0, PAGE_SIZE);
   return (
     <section className="section" id="projects" aria-label={t.projectsTitle}>
       <SectionHead title={t.projectsTitle} sub={t.projectsSub} />
@@ -84,7 +87,10 @@ export function Projects({
             key={f.key}
             type="button"
             className={`filter-pill${filter === f.key ? " active" : ""}`}
-            onClick={() => setFilter(f.key)}
+            onClick={() => {
+              setFilter(f.key);
+              setExpanded(false);
+            }}
             aria-pressed={filter === f.key}
           >
             {f.label}
@@ -92,7 +98,7 @@ export function Projects({
         ))}
       </div>
       <div className="projects-grid">
-        {visible.map((p) => (
+        {shown.map((p) => (
           <article className="project-card" key={p.slug}>
             <a className="project-thumb" href={p.demo} target="_blank" rel="noreferrer" aria-label={`${p.title} — ${t.liveDemo}`}>
               <img src={projectImages[p.slug]} alt={`${p.title} preview`} loading="lazy" />
@@ -116,11 +122,18 @@ export function Projects({
           </article>
         ))}
       </div>
-      <div className="center-row">
-        <a className="btn-outline" href="https://github.com/faezerahmatidev?tab=repositories" target="_blank" rel="noreferrer">
-          {t.viewAll}
-        </a>
-      </div>
+      {visible.length > PAGE_SIZE && (
+        <div className="center-row">
+          <button
+            type="button"
+            className="btn-outline"
+            onClick={() => setExpanded((e) => !e)}
+            aria-expanded={expanded}
+          >
+            {expanded ? t.showLess : t.viewAll}
+          </button>
+        </div>
+      )}
     </section>
   );
 }

@@ -27,6 +27,7 @@ export const site = {
   projectsSub: "Some of my work",
   sourceCode: "Source code",
   viewAll: "View all",
+  showLess: "Show less",
   contactTitle: "Get In Touch",
   contactSub: "Lets work together",
   fieldName: "Name",
@@ -94,6 +95,14 @@ export const projectFilters: Filter[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    slug: "crm-dashboard",
+    title: "CRM Dashboard",
+    tech: "Angular · TypeScript · SCSS",
+    category: "angular",
+    demo: "https://faezerahmatidev.github.io/CRM-Dashboard/",
+    repo: "https://github.com/faezerahmatidev/CRM-Dashboard"
+  },
   {
     slug: "nobatifa",
     title: "Nobatifa — Vehicle-Service Booking App",
