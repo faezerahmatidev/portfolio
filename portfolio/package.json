@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node -e \"const fs=require('fs');fs.copyFileSync('../pdf/resume-en-light.pdf','public/Faeze-Rahmati-Resume.pdf');fs.copyFileSync('../pdf/resume-fa-light.pdf','public/Faeze-Rahmati-Resume-FA.pdf');console.log('resume PDFs synced from ../pdf')\"",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "check": "tsc --noEmit"
