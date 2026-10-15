@@ -45,7 +45,7 @@ export const faContent: ResumeContent = {
         "فروشگاه اینترنتی فارسی و راست‌چین قهوه با حالت روشن و تیره؛ سبد خرید، محصولات با قیمت و تخفیف، بلاگ و جست‌وجو.",
       descEn:
         "Persian RTL coffee e-commerce with elegant light and dark modes; shopping cart, priced products with discounts, blog and search.",
-      tags: ["HTML", "CSS", "JavaScript"],
+      tags: ["Tailwind CSS", "HTML", "JavaScript"],
       links: [
         {
           labelFa: "دموی زنده",

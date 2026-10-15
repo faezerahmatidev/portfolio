@@ -7,7 +7,7 @@
 - لینک دمو (تأییدشده، زنده؛ فروشگاه فارسی و راست‌چین قهوه): https://faezerahmatidev.github.io/golden-brew/
 - مخزن کد: https://github.com/faezerahmatidev/golden-brew
 - هدف پروژه: فروشگاه اینترنتی قهوه با حالت روشن و تیره؛ سبد خرید، محصولات با قیمت و تخفیف، بلاگ و جست‌وجو
-- فناوری‌های واقعاً استفاده‌شده: HTML، CSS، JavaScript (زبان‌های غالب ریپو طبق GitHub API)
+- فناوری‌های واقعاً استفاده‌شده: Tailwind CSS نسخه ۴ (تأییدشده با `package.json` ریپو: `tailwindcss` و `@tailwindcss/cli`)، HTML، JavaScript
 - توضیح ثبت‌شده در ریپو: "A premium, responsive e-commerce platform for coffee lovers, featuring elegant Light and Dark modes."
 
 ## Project — CRM Dashboard (جدیدترین، Angular)
