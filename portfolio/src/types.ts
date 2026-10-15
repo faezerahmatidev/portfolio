@@ -16,7 +16,7 @@ export interface Project {
   slug: string;
   title: string;
   tech: string;
-  category: "angular" | "html" | "bootstrap";
+  category: "angular" | "html" | "bootstrap" | "tailwind";
   demo: string;
   repo: string;
 }

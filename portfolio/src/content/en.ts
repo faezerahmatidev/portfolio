@@ -90,6 +90,7 @@ export const services: Service[] = [
 export const projectFilters: Filter[] = [
   { key: "all", label: "All" },
   { key: "angular", label: "Angular" },
+  { key: "tailwind", label: "Tailwind" },
   { key: "html", label: "HTML & CSS" },
   { key: "bootstrap", label: "Bootstrap" }
 ];
@@ -98,8 +99,8 @@ export const projects: Project[] = [
   {
     slug: "golden-brew",
     title: "Golden Brew — Coffee E-Commerce",
-    tech: "HTML · CSS · JavaScript",
-    category: "html",
+    tech: "Tailwind CSS · HTML · JavaScript",
+    category: "tailwind",
     demo: "https://faezerahmatidev.github.io/golden-brew/",
     repo: "https://github.com/faezerahmatidev/golden-brew"
   },
