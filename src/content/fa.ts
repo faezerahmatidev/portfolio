@@ -31,11 +31,11 @@ export const faContent: ResumeContent = {
   education: {
     degree: "کارشناسی علوم کامپیوتر",
     school: "دانشگاه اصفهان",
-    date: "سال فراغت: [نیازمند تکمیل]"
+    date: "سال فراغت: ۱۴۰۱"
   },
   languagesList: [
     { name: "فارسی", level: "زبان مادری" },
-    { name: "انگلیسی", level: "[نیازمند تکمیل]" }
+    { name: "انگلیسی", level: "متوسط" }
   ],
   featuredProjects: [
     {

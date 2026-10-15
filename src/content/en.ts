@@ -31,11 +31,11 @@ export const enContent: ResumeContent = {
   education: {
     degree: "B.Sc. in Computer Science",
     school: "University of Isfahan",
-    date: "Graduation year: [TO BE CONFIRMED]"
+    date: "Graduation year: 2022"
   },
   languagesList: [
     { name: "Persian", level: "Native" },
-    { name: "English", level: "[TO BE CONFIRMED]" }
+    { name: "English", level: "Intermediate" }
   ],
   featuredProjects: [
     {
