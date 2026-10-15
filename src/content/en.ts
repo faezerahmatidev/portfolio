@@ -37,17 +37,29 @@ export const enContent: ResumeContent = {
     { name: "Persian", level: "Native" },
     { name: "English", level: "[TO BE CONFIRMED]" }
   ],
-  featuredProject: {
-    nameFa: "نوبتیفا — وب‌اپلیکیشن رزرو آنلاین نوبت اتوسرویس",
-    nameEn: "Nobatifa — Online Vehicle-Service Booking Web App",
-    descFa:
-      "وب‌اپلیکیشن فارسی و راست‌چین رزرو آنلاین نوبت اتوسرویس با Angular و Tailwind CSS؛ رزرو نوبت، مشاهده فاکتور و یادآوری نوبت بعدی.",
-    descEn:
-      "Persian RTL web app for booking vehicle-service appointments online, built with Angular and Tailwind CSS; booking, invoice view and next-appointment reminders.",
-    tags: ["Angular", "TypeScript", "Tailwind CSS"],
-    demo: "https://faezerahmatidev.github.io/Nobatifa-Website/",
-    repo: "https://github.com/faezerahmatidev/Nobatifa-Website"
-  },
+  featuredProjects: [
+    {
+      nameFa: "CRM Dashboard — داشبورد مدیریتی Angular",
+      nameEn: "CRM Dashboard — Angular Admin Dashboard",
+      descFa:
+        "داشبورد CRM با Angular standalone، SCSS و Angular Router، پیاده‌سازی قدم‌به‌قدم از روی Figma؛ احراز هویت، نمای فروش، جدول سفارش‌ها و فاکتورها، و بخش پیام‌ها.",
+      descEn:
+        "CRM dashboard built with Angular standalone, SCSS and Angular Router, implemented step by step from Figma; auth flows, sales overview, orders and invoices tables, messages section.",
+      tags: ["Angular", "TypeScript", "SCSS", "Angular Router"],
+      repo: "https://github.com/faezerahmatidev/CRM-Dashboard"
+    },
+    {
+      nameFa: "نوبتیفا — وب‌اپلیکیشن رزرو آنلاین نوبت اتوسرویس",
+      nameEn: "Nobatifa — Online Vehicle-Service Booking Web App",
+      descFa:
+        "وب‌اپلیکیشن فارسی و راست‌چین رزرو آنلاین نوبت اتوسرویس با Angular و Tailwind CSS؛ رزرو نوبت، مشاهده فاکتور و یادآوری نوبت بعدی.",
+      descEn:
+        "Persian RTL web app for booking vehicle-service appointments online, built with Angular and Tailwind CSS; booking, invoice view and next-appointment reminders.",
+      tags: ["Angular", "TypeScript", "Tailwind CSS"],
+      demo: "https://faezerahmatidev.github.io/Nobatifa-Website/",
+      repo: "https://github.com/faezerahmatidev/Nobatifa-Website"
+    }
+  ],
   projectKind: "Personal project",
   demoLink: "Live demo",
   codeLink: "Source code",

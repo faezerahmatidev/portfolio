@@ -34,10 +34,14 @@ export function ProjectItem({
         {desc}
       </p>
       <p dir="auto" style={{ margin: "8px 0 0", fontSize: "12.5px" }}>
-        <a href={item.demo} target="_blank" rel="noreferrer">
-          ↗ {t.demoLink}
-        </a>
-        {" · "}
+        {item.demo && (
+          <>
+            <a href={item.demo} target="_blank" rel="noreferrer">
+              ↗ {t.demoLink}
+            </a>
+            {" · "}
+          </>
+        )}
         <a href={item.repo} target="_blank" rel="noreferrer">
           ⌨ {t.codeLink}
         </a>

@@ -12,7 +12,7 @@ export interface FeaturedProject {
   descFa: string;
   descEn: string;
   tags: string[];
-  demo: string;
+  demo?: string;
   repo: string;
 }
 
@@ -61,7 +61,7 @@ export interface ResumeContent {
     date: string;
   };
   languagesList: { name: string; level: string }[];
-  featuredProject: FeaturedProject;
+  featuredProjects: FeaturedProject[];
   projectKind: string;
   demoLink: string;
   codeLink: string;
