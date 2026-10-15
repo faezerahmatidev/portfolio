@@ -90,9 +90,9 @@ export const services: Service[] = [
 export const projectFilters: Filter[] = [
   { key: "all", label: "All" },
   { key: "angular", label: "Angular" },
-  { key: "tailwind", label: "Tailwind" },
   { key: "html", label: "HTML & CSS" },
-  { key: "bootstrap", label: "Bootstrap" }
+  { key: "bootstrap", label: "Bootstrap" },
+  { key: "tailwind", label: "Tailwind" }
 ];
 
 export const projects: Project[] = [
