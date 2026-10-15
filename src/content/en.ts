@@ -39,6 +39,29 @@ export const enContent: ResumeContent = {
   ],
   featuredProjects: [
     {
+      nameFa: "گلدن برو — فروشگاه اینترنتی قهوه",
+      nameEn: "Golden Brew — Coffee E-Commerce",
+      descFa:
+        "فروشگاه اینترنتی فارسی و راست‌چین قهوه با حالت روشن و تیره؛ سبد خرید، محصولات با قیمت و تخفیف، بلاگ و جست‌وجو.",
+      descEn:
+        "Persian RTL coffee e-commerce with elegant light and dark modes; shopping cart, priced products with discounts, blog and search.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      links: [
+        {
+          labelFa: "دموی زنده",
+          labelEn: "Live demo",
+          url: "https://faezerahmatidev.github.io/golden-brew/",
+          icon: "↗"
+        },
+        {
+          labelFa: "سورس‌کد",
+          labelEn: "Source code",
+          url: "https://github.com/faezerahmatidev/golden-brew",
+          icon: "⌨"
+        }
+      ]
+    },
+    {
       nameFa: "CRM Dashboard — داشبورد مدیریتی Angular",
       nameEn: "CRM Dashboard — Angular Admin Dashboard",
       descFa:

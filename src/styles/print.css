@@ -6,7 +6,7 @@
 
   /* Keep the on-screen look: no flattening, backgrounds print via
      "Background graphics" (Chrome) / printBackground (auto export). */
-  body { line-height: 1.7; zoom: 0.82; }
+  body { line-height: 1.7; zoom: 0.78; }
 
   .topbar, .controls, .footer { display: none !important; }
 
@@ -18,7 +18,16 @@
     padding-inline: 0;
   }
 
-  .content { padding: 12px 22px 22px; }
+  .content { padding: 8px 22px 12px; }
+
+  .hero { padding: 20px 20px 14px !important; }
+  .hero h1 { font-size: 28px !important; }
+  html[lang="en"] .hero h1 { font-size: 30px !important; }
+
+  .resume-section { break-inside: avoid; padding: 10px 0 !important; }
+  .section-label { line-height: 1.6 !important; }
+  .tag-row { margin: 6px 0 4px !important; }
+  .exp-list li { margin: 1px 0 !important; }
 
   .resume-section { break-inside: avoid; }
   .exp-item, .skill-group { break-inside: avoid; }
