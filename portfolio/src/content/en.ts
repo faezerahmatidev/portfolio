@@ -96,6 +96,14 @@ export const projectFilters: Filter[] = [
 
 export const projects: Project[] = [
   {
+    slug: "golden-brew",
+    title: "Golden Brew — Coffee E-Commerce",
+    tech: "HTML · CSS · JavaScript",
+    category: "html",
+    demo: "https://faezerahmatidev.github.io/golden-brew/",
+    repo: "https://github.com/faezerahmatidev/golden-brew"
+  },
+  {
     slug: "crm-dashboard",
     title: "CRM Dashboard",
     tech: "Angular · TypeScript · SCSS",
