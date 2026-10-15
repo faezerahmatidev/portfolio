@@ -46,23 +46,58 @@ export const faContent: ResumeContent = {
       descEn:
         "CRM dashboard built with Angular standalone, SCSS and Angular Router, implemented step by step from Figma; auth flows, sales overview, orders and invoices tables, messages section.",
       tags: ["Angular", "TypeScript", "SCSS", "Angular Router"],
-      repo: "https://github.com/faezerahmatidev/CRM-Dashboard"
+      links: [
+        {
+          labelFa: "دموی زنده",
+          labelEn: "Live demo",
+          url: "https://faezerahmatidev.github.io/CRM-Dashboard/",
+          icon: "↗"
+        },
+        {
+          labelFa: "سورس‌کد",
+          labelEn: "Source code",
+          url: "https://github.com/faezerahmatidev/CRM-Dashboard",
+          icon: "⌨"
+        }
+      ]
     },
     {
-      nameFa: "نوبتیفا — وب‌اپلیکیشن رزرو آنلاین نوبت اتوسرویس",
-      nameEn: "Nobatifa — Online Vehicle-Service Booking Web App",
+      nameFa: "نوبتیفا — وب‌اپ رزرو نوبت + پنل مدیریت",
+      nameEn: "Nobatifa — Booking Web App + Admin Panel",
       descFa:
-        "وب‌اپلیکیشن فارسی و راست‌چین رزرو آنلاین نوبت اتوسرویس با Angular و Tailwind CSS؛ رزرو نوبت، مشاهده فاکتور و یادآوری نوبت بعدی.",
+        "وب‌اپلیکیشن فارسی و راست‌چین رزرو آنلاین نوبت اتوسرویس با Angular و Tailwind CSS به‌همراه پنل مدیریت مکمل آن؛ رزرو نوبت، مشاهده فاکتور و یادآوری نوبت بعدی.",
       descEn:
-        "Persian RTL web app for booking vehicle-service appointments online, built with Angular and Tailwind CSS; booking, invoice view and next-appointment reminders.",
+        "Persian RTL web app for booking vehicle-service appointments online with its companion admin panel, built with Angular and TypeScript; booking, invoice view and next-appointment reminders.",
       tags: ["Angular", "TypeScript", "Tailwind CSS"],
-      demo: "https://faezerahmatidev.github.io/Nobatifa-Website/",
-      repo: "https://github.com/faezerahmatidev/Nobatifa-Website"
+      links: [
+        {
+          labelFa: "دموی وب‌سایت",
+          labelEn: "Website demo",
+          url: "https://faezerahmatidev.github.io/Nobatifa-Website/",
+          icon: "↗"
+        },
+        {
+          labelFa: "دموی پنل ادمین",
+          labelEn: "Admin demo",
+          url: "https://faezerahmatidev.github.io/Nobatifa-Admin/",
+          icon: "↗"
+        },
+        {
+          labelFa: "سورس وب‌سایت",
+          labelEn: "Website source",
+          url: "https://github.com/faezerahmatidev/Nobatifa-Website",
+          icon: "⌨"
+        },
+        {
+          labelFa: "سورس پنل ادمین",
+          labelEn: "Admin source",
+          url: "https://github.com/faezerahmatidev/Nobatifa-Admin",
+          icon: "⌨"
+        }
+      ]
     }
   ],
   projectKind: "پروژه شخصی",
-  demoLink: "دموی زنده",
-  codeLink: "سورس‌کد",
   projectsCta: "مشاهده همه فعالیت‌ها در گیت‌هاب",
   footer: "آخرین به‌روزرسانی: مهر ۱۴۰۵ — این رزومه فقط شامل اطلاعات تأییدشده است."
 };

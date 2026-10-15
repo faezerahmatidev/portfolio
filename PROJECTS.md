@@ -4,7 +4,7 @@
 
 ## Project — CRM Dashboard (جدیدترین، Angular)
 - وضعیت: شخصی (Public، بدون لایسنس ثبت‌شده) — فعال، ساخته و پوش‌شده در ۱۴ اکتبر ۲۰۲۶
-- لینک دمو: ندارد (GitHub Pages فعال نیست)
+- لینک دمو (تأییدشده، زنده): https://faezerahmatidev.github.io/CRM-Dashboard/
 - مخزن کد: https://github.com/faezerahmatidev/CRM-Dashboard
 - هدف پروژه: داشبورد CRM با احراز هویت (ثبت‌نام/ورود/بازیابی/اطلاعات شرکت)، نمای فروش، جدول سفارش‌ها و فاکتورها، و بخش پیام‌ها
 - فناوری‌های واقعاً استفاده‌شده: Angular standalone، TypeScript، SCSS، Angular Router (تأییدشده با `angular.json` و README ریپو؛ زبان‌های غالب: HTML، TypeScript، SCSS)

@@ -92,7 +92,7 @@ export default function App() {
 
           <ResumeSection label={t.sections.projects}>
             {t.featuredProjects.map((p) => (
-              <ProjectItem key={p.repo} lang={lang} item={p} t={t} />
+              <ProjectItem key={p.nameEn} lang={lang} item={p} t={t} />
             ))}
             <p dir="auto" style={{ margin: "10px 0 0", fontSize: "12.5px" }}>
               <a href={GITHUB} target="_blank" rel="noreferrer" dir="auto">

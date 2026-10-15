@@ -34,17 +34,14 @@ export function ProjectItem({
         {desc}
       </p>
       <p dir="auto" style={{ margin: "8px 0 0", fontSize: "12.5px" }}>
-        {item.demo && (
-          <>
-            <a href={item.demo} target="_blank" rel="noreferrer">
-              ↗ {t.demoLink}
+        {item.links.map((l, i) => (
+          <span key={l.url}>
+            {i > 0 && " · "}
+            <a href={l.url} target="_blank" rel="noreferrer">
+              {l.icon} {lang === "fa" ? l.labelFa : l.labelEn}
             </a>
-            {" · "}
-          </>
-        )}
-        <a href={item.repo} target="_blank" rel="noreferrer">
-          ⌨ {t.codeLink}
-        </a>
+          </span>
+        ))}
       </p>
     </article>
   );

@@ -6,7 +6,7 @@
 
   /* Keep the on-screen look: no flattening, backgrounds print via
      "Background graphics" (Chrome) / printBackground (auto export). */
-  body { line-height: 1.7; zoom: 0.85; }
+  body { line-height: 1.7; zoom: 0.82; }
 
   .topbar, .controls, .footer { display: none !important; }
 

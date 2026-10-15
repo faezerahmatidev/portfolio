@@ -6,14 +6,20 @@ export interface SkillGroup {
   items: { name: string; note?: string }[];
 }
 
+export interface ProjectLink {
+  labelFa: string;
+  labelEn: string;
+  url: string;
+  icon: string;
+}
+
 export interface FeaturedProject {
   nameFa: string;
   nameEn: string;
   descFa: string;
   descEn: string;
   tags: string[];
-  demo?: string;
-  repo: string;
+  links: ProjectLink[];
 }
 
 export interface Experience {
@@ -63,8 +69,6 @@ export interface ResumeContent {
   languagesList: { name: string; level: string }[];
   featuredProjects: FeaturedProject[];
   projectKind: string;
-  demoLink: string;
-  codeLink: string;
   projectsCta: string;
   footer: string;
 }
