@@ -39,12 +39,35 @@ export const faContent: ResumeContent = {
   ],
   featuredProjects: [
     {
+      nameFa: "داشبورد آب‌وهوا — Weather Dashboard",
+      nameEn: "Weather Dashboard — Angular Multi-Page App",
+      descFa:
+        "داشبورد چندصفحه‌ای آب‌وهوا با Angular 20 و Leaflet؛ حالت تیره، نقشه و تقویم (داده نمونه).",
+      descEn:
+        "Multi-page weather dashboard in Angular 20 with Leaflet; dark mode, map and calendar (sample data).",
+      tags: ["Angular", "TypeScript", "Leaflet"],
+      links: [
+        {
+          labelFa: "دموی زنده",
+          labelEn: "Live demo",
+          url: "https://faezerahmatidev.github.io/Weather-Dashboard/",
+          icon: "↗"
+        },
+        {
+          labelFa: "سورس‌کد",
+          labelEn: "Source code",
+          url: "https://github.com/faezerahmatidev/Weather-Dashboard",
+          icon: "⌨"
+        }
+      ]
+    },
+    {
       nameFa: "گلدن برو — فروشگاه اینترنتی قهوه",
       nameEn: "Golden Brew — Coffee E-Commerce",
       descFa:
-        "فروشگاه اینترنتی فارسی و راست‌چین قهوه با حالت روشن و تیره؛ سبد خرید، محصولات با قیمت و تخفیف، بلاگ و جست‌وجو.",
+        "فروشگاه فارسی قهوه با حالت روشن و تیره؛ سبد خرید، قیمت و تخفیف، بلاگ.",
       descEn:
-        "Persian RTL coffee e-commerce with elegant light and dark modes; shopping cart, priced products with discounts, blog and search.",
+        "Persian RTL coffee shop with light and dark modes; cart, pricing with discounts, blog.",
       tags: ["Tailwind CSS", "HTML", "JavaScript"],
       links: [
         {
@@ -65,9 +88,9 @@ export const faContent: ResumeContent = {
       nameFa: "CRM Dashboard — داشبورد مدیریتی Angular",
       nameEn: "CRM Dashboard — Angular Admin Dashboard",
       descFa:
-        "داشبورد CRM با Angular standalone، SCSS و Angular Router، پیاده‌سازی قدم‌به‌قدم از روی Figma؛ احراز هویت، نمای فروش، جدول سفارش‌ها و فاکتورها، و بخش پیام‌ها.",
+        "داشبورد CRM با Angular و SCSS از روی Figma؛ احراز هویت، فروش، سفارش‌ها و پیام‌ها.",
       descEn:
-        "CRM dashboard built with Angular standalone, SCSS and Angular Router, implemented step by step from Figma; auth flows, sales overview, orders and invoices tables, messages section.",
+        "CRM dashboard in Angular with SCSS, built from Figma; auth, sales, orders and messages.",
       tags: ["Angular", "TypeScript", "SCSS", "Angular Router"],
       links: [
         {
@@ -88,9 +111,9 @@ export const faContent: ResumeContent = {
       nameFa: "نوبتیفا — وب‌اپ رزرو نوبت + پنل مدیریت",
       nameEn: "Nobatifa — Booking Web App + Admin Panel",
       descFa:
-        "وب‌اپلیکیشن فارسی و راست‌چین رزرو آنلاین نوبت اتوسرویس با Angular و Tailwind CSS به‌همراه پنل مدیریت مکمل آن؛ رزرو نوبت، مشاهده فاکتور و یادآوری نوبت بعدی.",
+        "رزرو آنلاین نوبت اتوسرویس (فارسی و راست‌چین) با پنل مدیریت مکمل؛ Angular و TypeScript.",
       descEn:
-        "Persian RTL web app for booking vehicle-service appointments online with its companion admin panel, built with Angular and TypeScript; booking, invoice view and next-appointment reminders.",
+        "Persian RTL booking web app with companion admin panel in Angular; booking, invoices, reminders.",
       tags: ["Angular", "TypeScript", "Tailwind CSS"],
       links: [
         {
