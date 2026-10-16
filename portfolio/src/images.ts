@@ -6,8 +6,10 @@ import campingImg from "./assets/projects/camping.jpg";
 import nftImg from "./assets/projects/nft.jpg";
 import crmDashboardImg from "./assets/projects/crm-dashboard.jpg";
 import goldenBrewImg from "./assets/projects/golden-brew.jpg";
+import weatherDashboardImg from "./assets/projects/weather-dashboard.jpg";
 
 export const projectImages: Record<string, string> = {
+  "weather-dashboard": weatherDashboardImg,
   "golden-brew": goldenBrewImg,
   "crm-dashboard": crmDashboardImg,
   nobatifa: nobatifaImg,

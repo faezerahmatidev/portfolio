@@ -96,6 +96,14 @@ export const projectFilters: Filter[] = [
 
 export const projects: Project[] = [
   {
+    slug: "weather-dashboard",
+    title: "داشبورد آب‌وهوا",
+    tech: "Angular · TypeScript · Leaflet",
+    category: "angular",
+    demo: "https://faezerahmatidev.github.io/Weather-Dashboard/",
+    repo: "https://github.com/faezerahmatidev/Weather-Dashboard"
+  },
+  {
     slug: "golden-brew",
     title: "گلدن برو — فروشگاه قهوه",
     tech: "Tailwind CSS · HTML · JavaScript",
